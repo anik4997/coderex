@@ -1,10 +1,5 @@
 <?php
-// Database connection start
-$connect = mysqli_connect('localhost','coderex','Coderex@12345','products');
-if(!$connect){
-  die("Not connected".mysqli_error());
-}
-//  Database connection end
+include 'database_connection.php';
 if(isset($_POST['order_btn'])){
     $mail_query = "SELECT * FROM selected_items";
     $mail_query_connection = mysqli_query($connect,$mail_query);
