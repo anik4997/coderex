@@ -1,10 +1,5 @@
 <?php
-// Database connection start
- $connect = mysqli_connect('localhost','coderex','Coderex@12345','products');
- if(!$connect){
-   die("Not connected".mysqli_error());
- }
-//  Database connection end
+include 'database_connection.php';
 // Getting input data through post method
   if(isset($_POST['submit'])){
    $product_name = $_POST['product_name'];
